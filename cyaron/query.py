@@ -174,8 +174,8 @@ class RangeQuery(Generic[WeightT], Sequence[Tuple[List[int], List[int],
                 - An integer, which will be treated as a range from 1 to that integer.
                 - A tuple of two integers, representing the lower and upper bounds of the range.
             mode (RangeQueryRandomMode): The mode for generating the queries. It can be:
-                - RangeQueryRandomMode.allow_equal: Allow the generated l and r to be equal.
-                - RangeQueryRandomMode.less: Ensure that l and r are not equal.
+                - RangeQueryRandomMode.ALLOW_EQUAL: Allow the generated l and r to be equal.
+                - RangeQueryRandomMode.LESS: Ensure that l and r are not equal.
             weight_generator: A function that generates the weights for the queries. It should:
                 - Take the index of query (starting from 1), starting and ending positions as input.
                 - Return a list of weights of any length.
